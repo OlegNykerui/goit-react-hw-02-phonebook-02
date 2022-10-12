@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Item, ButtonDelete } from '../Form/Form.styled';
 
 const ContactItem = ({ id, name, number, deleteButton }) => {
@@ -12,6 +14,10 @@ const ContactItem = ({ id, name, number, deleteButton }) => {
       </Item>
     </>
   );
+};
+
+ContactItem.propTypes = {
+  deleteButton: PropTypes.func.isRequired,
 };
 
 export default ContactItem;

@@ -1,10 +1,9 @@
 import { Component } from 'react';
 import nextId from 'react-id-generator';
 
-import Contacts from './Contacts/Contacts';
-import Form from './Form/Form';
+import ContactsList from './Contacts/ContactsList';
+import ContactForm from './Form/ContactForm';
 import Filter from './Filter/Filter';
-import { Wrapper, Title } from './Form/Form.styled';
 
 export class App extends Component {
   state = {
@@ -58,13 +57,25 @@ export class App extends Component {
     const fltered = this.getFilteredContacts();
 
     return (
-      <Wrapper>
-        <Title>PhoneBook</Title>
-        <Form onSubmit={this.addContact} />
+      <div
+        style={{
+          width: '500px',
+          height: '500px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          border: '1px dashed orange',
+          backgroundColor: '#fffcf9',
+        }}
+      >
+        <h1 style={{ textAlign: 'center' }}>PhoneBook</h1>
+
+        <ContactForm onSubmit={this.addContact} />
+
+        <h2 style={{ textAlign: 'center' }}>Contacts</h2>
 
         <Filter value={filter} onChange={this.filterChange} />
-        <Contacts deleteButton={this.deleteContact} contacts={fltered} />
-      </Wrapper>
+        <ContactsList deleteButton={this.deleteContact} contacts={fltered} />
+      </div>
     );
   }
 }

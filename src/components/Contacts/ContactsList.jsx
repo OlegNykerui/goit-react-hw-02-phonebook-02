@@ -1,9 +1,9 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import nextId from 'react-id-generator';
 import ContactItem from './ContactItem';
 import { List } from '../Form/Form.styled';
 
-const Contacts = ({ contacts, deleteButton }) => {
+const ContactsList = ({ contacts, deleteButton }) => {
   return (
     <>
       <List>
@@ -23,4 +23,14 @@ const Contacts = ({ contacts, deleteButton }) => {
   );
 };
 
-export default Contacts;
+ContactsList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+};
+
+export default ContactsList;

@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { FormBox, Input, Button } from './Form.styled';
 
-class Form extends Component {
+class ContactForm extends Component {
   state = {
     name: '',
     number: '',
@@ -23,7 +23,6 @@ class Form extends Component {
     event.preventDefault();
 
     this.props.onSubmit(this.state);
-    // this.addContacts(this.state.name);
 
     this.reset();
   };
@@ -63,4 +62,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default ContactForm;

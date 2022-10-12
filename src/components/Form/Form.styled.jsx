@@ -1,17 +1,4 @@
-import styled from '@emotion/styled';
-
-export const Wrapper = styled.div`
-  width: 500px;
-  height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px dashed orange;
-  background-color: #fffcf9;
-`;
-
-export const Title = styled.h1`
-  text-align: center;
-`;
+import styled from 'styled-components';
 
 export const FormBox = styled.form`
   display: flex;
