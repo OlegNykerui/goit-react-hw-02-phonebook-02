@@ -60,7 +60,6 @@ export class App extends Component {
       <div
         style={{
           width: '500px',
-          height: '500px',
           marginLeft: 'auto',
           marginRight: 'auto',
           border: '1px dashed orange',

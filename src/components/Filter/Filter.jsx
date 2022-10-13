@@ -1,4 +1,4 @@
-import { Input } from 'components/Form/Form.styled';
+import { Input } from 'components/Filter/Filter.styled';
 
 const Filter = ({ value, onChange }) => {
   return (

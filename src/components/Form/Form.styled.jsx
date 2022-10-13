@@ -1,18 +1,29 @@
 import styled from 'styled-components';
 
-export const FormBox = styled.form`
+import {
+  Form as FormikForm,
+  Field as InputField,
+  ErrorMessage as ErrorMes,
+} from 'formik';
+
+export const Form = styled(FormikForm)`
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 25px;
 `;
 
-export const Input = styled.input`
+export const Field = styled(InputField)`
   height: 20px;
   width: 200px;
   border: 2px solid orange;
   border-radius: 10px;
   margin-left: 145px;
+`;
+
+export const ErrorMessage = styled(ErrorMes)`
+  text-align: center;
+  color: red;
 `;
 
 export const Button = styled.button`
